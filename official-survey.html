@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link rel="stylesheet" href="official-survey.css">
+        <title>An Amplified Survey</title>
+       
+    </head>
+
+    <body>
+    
+       <!--<img src="images\wale.jpg" alt="party_people" width="500" height="500"> -->
+       <div class="container">
+
+      <div>
+        <h4></h4>
+
+        <h1>A Survey About Nothing</h1>
+      </div>
+
+      <div>
+        <h3>Thank you for taking the time to participate in <br> a short Survey About Nothing. <br> Below are some random questions...About Nothing. <br> Kindly answer the questions and I'll see you at the end! :) </h3>
+      </div>
+
+       
+       
+        <form name="submit-to-google-sheet">
+
+          <div class="intro">
+            <h3>Introduction</h3>
+            <label for="full_name">Name:</label>
+            <input type="text" name="Full Name" placeholder="Full Name" required> 
+            <br>
+            <label for="email_address">Email:</label>
+            <input type="email" name="Email" placeholder="Email Address" required> 
+          </div>
+
+          <div class="social-media">
+            <h3>Social Media Preference <br> (Check All That Applies): </h3>
+
+            <label for="Twitter">Twitter</label>
+            <input type="checkbox" name="Social Media" for="Social Media">
+            <br>
+            <label for="Instagram">Instagram</label>
+            <input type="checkbox" name="Social Media" for="Instagram">
+            <br>
+            <label for="Facebook">Facebook</label>
+            <input type="checkbox" name="Social Media" for="Facebook">
+            <br>
+            <label for="Tik Tok">Tik Tok</label>
+            <input type="checkbox" name="Social Media" for="Tik Tok">
+            <br>
+            <label for="full_name">Snapchat</label>
+            <input type="checkbox" name="Social Media" for="Snapchat">
+          </div>
+
+          <div class="food">
+            <h3>Favorite Food or Resturant</h3>
+            <input type="text" name="Food" for="food" placeholder="I said eat what?!...">
+          </div>
+
+          <div class="lyric">
+            <h3>Complete the lyric...</h3>
+            <p> I get the <input type="text"> with numbers, that's <input type="text">. I got ya BM wan' put on <input type="text">. </p>
+          </div>
+
+          <div class="zodiac">
+            <h3>Zodiac:</h3>
+            <select>
+              <option>Capricorn</option>
+              <option>Aquarius</option>
+              <option>Pisces</option>
+              <option>Aries</option>
+              <option>Taurus</option>
+              <option>Gemini</option>
+              <option>Cancer</option>
+              <option>LEO</option>
+              <option>Virgo</option>
+              <option>Libra</option>
+              <option>Scorpio</option>
+              <option>Sagittarius</option>
+            </select>
+          </div>
+
+          <div class="weed">
+            <h3>Weed &hearts;</h3>
+            <label>Indica</label>
+            <input type="radio" name="Weed" for="weed">
+
+            <label>Sativa</label>
+            <input type="radio" name="Weed" for="weed">
+          </div>
+          <div>
+            <footer>
+              <h2>I told you...hella random (LOL). <br> Thank you again for your participation. <br> Please submit your survey and receive a <br> coupon for your next purchase.</h2>
+            </footer>
+          </div>
+
+        <div id="popup">
+          <button type="submit" class="btn" onClick="openPopup()">SUBMIT</button>
+        </div>
+
+<span id="msg"></span>
+
+        </form>
+
+
+
+      </div>      
+
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwvdvt46S9q2qFNQTTbTzAA0GrYKMYFzJ8wF4Nng00RM9u1BSAS6hYrvm-1OnoCWFpD/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+            msg.innerHTML = 'Your Survey Has Been Submitted. You may exit the survey'
+            setTimeout(function(){
+              msg.innerHTML = "";
+            }, 5000)
+            form.reset()
+        })
+            .catch(error => console.error('Error!', error.message))
+        })
+
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+          popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+          popup.classList.remove("open-popup");
+        }
+      </script>
+    </body>    
+</html>

@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body {
+  background: linear-gradient(white, rgb(35,139,139), white, rgb(35,139,139));
+}
+
+img {
+  margin-top: 40px;
+  margin-left: 430px;
+  padding-bottom: 40px;
+}
+
+
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+h4 {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    margin: auto;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    margin-bottom: 1px;
+    margin-top: 10px;
+}
+
+.intro {
+  width: 400px;
+  height: 150px;
+  border: solid 2px red;
+  text-align: center;
+  padding-bottom: 20px;
+  background: radial-gradient( white, rgb(35,139,139));
+
+}
+
+.intro input {
+  background: none;
+  padding: 5px;
+ 
+}
+
+.intro h3 {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color: rgb(31, 82, 82);
+}
+
+.social-media {
+  width: 400px;
+  height: 200px;
+  border: solid 2px red;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 20px; 
+  background: radial-gradient( white, rgb(35,139,139));
+
+}
+
+.social-media h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  align-items: center;
+  color: rgb(31, 82, 82);
+}
+
+.food {
+  width: 400px;
+  height: 120px;
+  border: solid 2px red;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background: radial-gradient( white, rgb(35,139,139));
+
+}
+
+.food h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(31, 82, 82);
+
+}
+
+.food input {
+  background: none;
+  padding: 10px;
+  
+}
+
+.lyric {
+  width: 400px;
+  height: 200px;
+  border: solid 2px red;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background: radial-gradient( white, rgb(35,139,139));
+
+}
+
+.lyric h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(31, 82, 82);
+
+}
+
+.lyric input {
+  background: none;
+  margin: 10px;
+}
+
+.zodiac {
+  width: 400px;
+  height: 120px;
+  border: solid 2px red;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background: radial-gradient( white, rgb(35,139,139));
+
+}
+
+.zodiac h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(31, 82, 82);
+
+}
+
+.zodiac select {
+  background: none;
+  padding: 10px;
+}
+
+.weed {
+  width: 400px;
+  height: 100px;
+  border: solid 2px red;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background: radial-gradient( white, rgb(35,139,139));
+
+}
+
+.weed h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(31, 82, 82);
+
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: red;
+  z-index: 1;
+  position: relative;
+  left: 10px;
+  top: -80px;
+}
+
+h2 {
+ text-align: center;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ color: #fff;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+
+}
+
+::placeholder {
+  color: red;
+}
+
+.btn {
+  padding: 10px 40px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  border: 3px solid red;
+  margin-left: 115px;
+  color: red;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+span {
+  color: red;
+  margin-top: 20px;
+  display: block;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  img {
+    margin-top: 40px;
+    margin-left: 150px;
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: red;
+    z-index: 1;
+    position: relative;
+    left: -5px;
+   
+  }
+
+}
+
+@media (max-width: 767px) {
+  img {
+    margin-top: 40px;
+    margin-left: 80px;
+    padding-bottom: 40px;
+
+  }
+
+  h4 {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    margin: auto;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  z-index: 1;
+  position: relative;
+  left: -5px;
+}
+
+}
